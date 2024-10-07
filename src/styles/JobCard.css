@@ -1,0 +1,119 @@
+.job-card{
+    width: 280px;
+    /* height: 200px; */
+    border: 2px solid #E6EEFE;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    .job-poster{
+        width: 30%;
+        img{
+            width: 100%;
+
+        }
+    }
+    p, h3, h4{
+        margin: 0;
+    }
+    .banner{
+        background-color: #F3F3F3;
+        width: 35px;
+        padding: 5px;
+        border-radius: 10px;
+        margin: 0 auto;
+        p{
+            text-align: center;
+            font-size: 13px;
+            color: #ADB9D3;
+
+        }
+    }
+    .job-title{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .company-name{
+        h4{
+            text-align: center;
+            color: #3376F7;
+        }
+    }
+    .job-info{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 12px;
+        .job-info-row{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+        .info{
+            display: flex;
+            justify-content: flex-start;
+            gap: 5px;
+            align-items: center;
+            p{
+                color: #ADB9D3;
+                font-weight: 500;
+                font-size: 13px;
+            }
+            svg{
+                font-size: 18px;
+                color: #ADB9D3;
+
+            }
+        }
+
+    }
+
+}
+.job-share{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    #details{
+        justify-self: flex-end;
+    }
+    .job-bookmark{
+        background-color: #E6EEFE;
+        border-radius: 20px;
+        width: 15%;
+        padding: 8px;
+        text-align: center;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        border: 2px solid gray;
+        cursor: pointer;
+    }
+    svg{
+        font-size: 20px;
+    }
+}
+
+.job-share-left{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+}
+.job-share-right{
+    background-color: #E6EEFE;
+        border-radius: 20px;
+        width: 43%;
+        padding: 8px;
+        text-align: center;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        border: 2px solid gray;
+        cursor: pointer;
+    h5{
+        margin: 0;
+    }
+}
