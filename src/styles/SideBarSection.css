@@ -1,0 +1,12 @@
+.side-bar{
+    flex: 25% 1;
+    width: 100%;
+    border-radius: 20px;
+    height: 100vh;
+    padding: 30px;
+    background-color: #E6EEFE;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}

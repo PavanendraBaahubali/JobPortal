@@ -1,0 +1,8 @@
+.main-sectionLayout{
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 40px;
+}
