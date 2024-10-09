@@ -4,9 +4,9 @@ import SalaryRange from './SalaryRange'
 import SideBarDetails from './SideBarDetails'
 
 const SideBarSection = () => {
-    const jobType = ["Full Time", "Part Time", "Internship", "Contract"]
-    const workSetting = ["On Site", "Remote", "Hybrid"]
-    const careers = ["Entry Level", "Intermediate", "Advanced"];
+    const jobType = ["fullTime", "partTime", "internship", "contract"]
+    const workSetting = ["onSite", "remote", "hybrid"]
+    const careers = ["entryLevel", "intermediate", "advanced"];
   return (
     <div className='side-bar'>
         <SalaryRange />

@@ -14,6 +14,16 @@
         justify-content: center;
         gap: 20px;
         align-items: center;
+        .active{
+            color: #3376F7;
+
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        
         p{
             cursor: pointer;
             font-weight: 500;

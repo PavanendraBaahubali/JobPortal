@@ -6,7 +6,17 @@ import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import ShareIcon from '@mui/icons-material/Share';
-const JobCard = () => {
+import { useNavigate } from 'react-router-dom';
+const JobCard = ({job}) => {
+    const jobId = job._id
+    const navigate = useNavigate();
+    const handleJobId = () => {
+        navigate(`/job/${jobId}`);
+    }
+    const workTypes = Object.keys(job.workTypes);
+    const typesOfWork = workTypes.filter((type) => (
+        job.workTypes[type]
+    ))
   return (
     <div className='job-card'>
         <div className = "banner">
@@ -15,14 +25,14 @@ const JobCard = () => {
         <div className='job-title'>
             <div className='job-poster'>
                 <img 
-                alt = "oompany image"
+                alt = "company-logo"
                 src = "https://press.aboutamazon.in/static-files/3ca754e0-9176-4d89-8174-056267008479"
                 />
             </div>
-            <h3>UI/UX Designer</h3>
+            <h3>{job.job.title}</h3>
         </div>
         <div className='company-name'>
-            <h4>Amazon</h4>
+            <h4>{job.company}</h4>
         </div>
         <div className='job-info'>
 
@@ -30,12 +40,12 @@ const JobCard = () => {
 
             <div className='info'>
                 <LocationOnIcon />
-                <p>Jakarta, ID</p>
+                <p>{job.job.location}</p>
             </div>
 
             <div className='info'>
                 <AttachMoneyIcon />
-                <p>500-1500</p>
+                <p>{job.salaryRange.from}-{job.salaryRange.to}</p>
             </div>
 
             </div>
@@ -43,12 +53,22 @@ const JobCard = () => {
 
             <div className='info'>
                 <WorkHistoryIcon />
-                <p>Full Time</p>
+                {
+                    typesOfWork.map((type, index) => (
+                        index === workTypes.length - 1 ?
+                <p>{type[0].toUpperCase() + type.substring(1) }</p>
+                        :
+                        job.workTypes[type] ?
+                <p>{type[0].toUpperCase() + type.substring(1) + "/"}</p>
+                        :
+                        ""
+                    ))
+                }
             </div>
 
             <div className='info'>
                 <AccessTimeIcon />
-                <p>15 Aug 2024</p>
+                <p>{job.postedDate}</p>
             </div>
             
             </div>
@@ -64,7 +84,7 @@ const JobCard = () => {
             </div>
             </div>
             <div className='job-share-right'>
-                <h5>Details</h5>
+                <h5 onClick={() => handleJobId()}>Details</h5>
             </div>
         </div>
     </div>

@@ -1,0 +1,121 @@
+.JobDetails{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 2px solid #e6eefe;
+    border-radius: 20px;
+
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        box-sizing: border-box;
+        
+    .job-details-top{
+        width: 100%;
+        display: flex;
+        gap: 40px;
+        flex-direction: column;
+    }
+    
+}
+.job-detail-head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2{
+        margin-right: 20%;
+    }
+}
+.job-company{
+    width: 30%;
+    flex-direction: column;
+    h6{
+        margin: 0;
+        font-size: 18px;
+        color: #3376f7;
+    }
+}
+.job-detail-img{
+    width: 30%;
+    height: 40px;
+    img{
+        width: 100%;
+        object-fit: cover;
+        }  
+    h2{
+        margin: 0;
+    }
+}
+.job-detail-bookmark{
+    width: 18px;
+    height: 18px;
+    background-color: #e6eefe;
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    svg{
+        font-size: 20px;
+    }
+}
+.job-detail-info{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .job-detail-row{
+        display: flex;
+        justify-content: flex-start;
+        gap: 5px;
+        align-items: center;
+        svg{
+            font-size: 14px;
+        }
+        p{
+            margin: 0;
+            font-size: 14px;
+            color: gray;
+            font-weight: 400;
+            letter-spacing: 0.8px;
+        }
+    }
+}
+
+.job-apply{
+    display: flex;
+    justify-content: flex-end;
+    button{
+        width: 13%;
+        border-radius: 20px;
+        padding: 10px;
+        border: 2px solid #6692e9;
+        background-color: #3376f7;
+        color: white;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+}
+.job-details-bottom{
+    width: 100%;
+    p{
+        letter-spacing: 1px;
+        color: gray;
+        font-size: 15px;
+        line-height: 23px;
+    }
+}
+.job-description{
+    p{
+        margin: 0;
+    }
+}
+
+.job-skills-list{
+    display: flex;
+    gap: 10px;
+}

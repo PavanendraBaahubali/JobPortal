@@ -39,13 +39,14 @@
     -webkit-appearance: none; /* Override default CSS styles */
     appearance: none; /* Override default CSS styles */
     width: 100%; /* Full-width */
-   
     background: #ffffff; /* Background color of the track */
     outline: none; /* Remove outline */
     opacity: 0.7; /* Transparency */
     transition: opacity .2s; /* Transition effect */
+    cursor: pointer;
 }
 
 .range:hover {
     opacity: 1; /* Fully opaque on hover */
 }
+

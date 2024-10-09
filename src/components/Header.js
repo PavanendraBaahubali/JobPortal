@@ -1,5 +1,6 @@
 import React from 'react'
 import "../styles/Header.css"
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -8,7 +9,9 @@ const Header = () => {
             <h1  className='logo'>JoFind
                 <b className='logo-round'></b>
             </h1>
-            <p>Find Jobs</p>
+            <p><NavLink to="/">
+            Find Jobs
+                </ NavLink></p>
             <p>Companies</p>
             <p>About JoFind</p>
         </div>
