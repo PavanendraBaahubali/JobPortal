@@ -3,6 +3,7 @@ import "../styles/Header.css"
 import { NavLink } from 'react-router-dom'
 
 const Header = () => {
+    const token = localStorage.getItem('token');
   return (
     <div className='top-header'>
         <div className='top-head-nav'>
@@ -17,7 +18,20 @@ const Header = () => {
         </div>
 
         <div className='top-head-auth'>
-            <p>Sign In</p>
+            {
+                token ?
+                <>
+                <p id = 'book-mark'><NavLink to="/bookmarks">
+            Bookmarks
+                </ NavLink></p>
+            <p>Sign Out</p>
+            <div className='profile'></div>
+                </>
+
+                :
+                    <NavLink to = '/auth'><p>Sign In</p></NavLink>
+            }
+            
         </div>
 
     </div>

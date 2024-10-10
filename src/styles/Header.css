@@ -53,9 +53,69 @@
 }
 
 .top-head-auth{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    #book-mark{
+        color: black;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .profile{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #01f2f2;
+        border: 2px solid gray;
+
+    }
     p{
         color: #0da7e6;
         font-weight: 500;
         font-size: 14px;
+        cursor: pointer;
+    }
+}
+.top-head-auth{
+    .active{
+        color: #3376F7;
+
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    
+    p{
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    p:hover{
+        color: #3376F7;
+
+    }
+}
+#book-mark{
+    .active{
+        color: #3376F7;
+
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    
+    p{
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    p:hover{
+        color: #3376F7;
+
     }
 }
