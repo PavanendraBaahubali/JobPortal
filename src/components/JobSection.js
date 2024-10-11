@@ -27,7 +27,7 @@ const JobSection = () => {
             setJobData([]);
             const queryParams = getQueryParams();
 
-            let ApiUrl = `http://localhost:3030/`;
+            let ApiUrl = `https://jobportal-backend-0mls.onrender.com`;
             const queryString = Object.keys(queryParams)
                 .map((key) => `${key}=${queryParams[key]}`)
                 .join("&");

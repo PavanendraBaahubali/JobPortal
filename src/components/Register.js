@@ -48,7 +48,7 @@ const Register = () => {
 
         // If validation passes
        
-        const response = await axios.post("http://localhost:3030/auth/register", formData);
+        const response = await axios.post("https://jobportal-backend-0mls.onrender.com/auth/register", formData);
         localStorage.setItem('token', response.data.token);
         navigate('/');
 

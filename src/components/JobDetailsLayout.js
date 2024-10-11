@@ -14,7 +14,7 @@ const JobDetailsLayout = () => {
   useEffect(() => {
     setLoading(true);
     
-    axios.get(`http://localhost:3030/job/${jobId}`)
+    axios.get(`https://jobportal-backend-0mls.onrender.com/job/${jobId}`)
     .then((result) => setJobInfo(result.data))
     .catch((err) => {
       console.log(err.message)
