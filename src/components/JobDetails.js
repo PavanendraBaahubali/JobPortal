@@ -6,21 +6,21 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { useDispatch } from 'react-redux';
 import { addToBookmark, removeBookmark } from '../reduxSlices/BookMarkSlice';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 
 const JobDetails = ({info}) => {
    const [isToggle, setToggle] = useState(false);
-   const [showPopup, setPopup] = useState(false);
-
-   const dispatch = useDispatch();
-
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    
    const toggleBookmark = () => {
     const token = localStorage.getItem('token');
     if (!token){
-        dispatch(setPopup(!showPopup));
+        navigate('/auth/')
         return;
     }
     if(!isToggle) {

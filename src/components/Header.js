@@ -1,9 +1,16 @@
 import React from 'react'
 import "../styles/Header.css"
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const Header = () => {
     const token = localStorage.getItem('token');
+    const navigate = useNavigate();
+    const handleSignOut = () => {
+        localStorage.removeItem('token');
+        navigate('/auth/login')
+    }
+
+
   return (
     <div className='top-header'>
         <div className='top-head-nav'>
@@ -24,7 +31,7 @@ const Header = () => {
                 <p id = 'book-mark'><NavLink to="/bookmarks">
             Bookmarks
                 </ NavLink></p>
-            <p>Sign Out</p>
+            <p onClick={() => handleSignOut()}>Sign Out</p>
             <div className='profile'></div>
                 </>
 
