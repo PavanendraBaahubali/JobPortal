@@ -7,7 +7,7 @@
 
 }
 .job-card  p, h3, h4{
-    margin: 0;
+    /* margin: 0; */
 }
 .job-card .banner{
     background-color: #F3F3F3;
@@ -71,14 +71,14 @@
 
 
 .job-card{
-    width: 280px;
-    height: 240px;
-    border: 2px solid #E6EEFE;
+    border: 2px solid #e6eefe;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
     gap: 10px;
+    height: 240px;
+    padding: 20px;
+    width: 300px;
     
 
 

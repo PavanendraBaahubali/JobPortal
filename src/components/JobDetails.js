@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {  useState } from 'react'
 import "../styles/JobDetails.css"
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import QueryBuilderIcon from '@mui/icons-material/QueryBuilder';
@@ -6,10 +6,33 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { useDispatch } from 'react-redux';
+import { addToBookmark, removeBookmark } from '../reduxSlices/BookMarkSlice';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
 
 
 const JobDetails = ({info}) => {
-    console.log(info)
+   const [isToggle, setToggle] = useState(false);
+   const [showPopup, setPopup] = useState(false);
+
+   const dispatch = useDispatch();
+
+   const toggleBookmark = () => {
+    const token = localStorage.getItem('token');
+    if (!token){
+        dispatch(setPopup(!showPopup));
+        return;
+    }
+    if(!isToggle) {
+        setToggle(true)
+        dispatch(addToBookmark(info));
+    }
+    else{
+        setToggle(false);
+        dispatch(removeBookmark(info));
+    }
+}
+
   return (
     <div key={info._id} className='JobDetails'>
         <div className='job-details-top'>
@@ -27,8 +50,10 @@ const JobDetails = ({info}) => {
                 <h2>{
                 info.job.title
            }</h2>
-                <div className='job-detail-bookmark'>
-                <TurnedInNotIcon />
+                <div onClick={() => toggleBookmark()} className='job-detail-bookmark'>
+                
+                    {isToggle ? <BookmarkIcon /> :  
+                    <TurnedInNotIcon />}
                 </div>
             </div>
             <div className='job-detail-info'>

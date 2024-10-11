@@ -1,3 +1,50 @@
+.top-head-nav .active{
+    color: #3376F7;
+
+}
+.top-head-nav 
+a {
+    text-decoration: none;
+    color: black;
+}
+.top-head-nav p{
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+}
+.top-head-nav p:hover{
+    color: #3376F7;
+
+}
+.logo{
+    position: relative;
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+.logo-round{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #01f2f2;
+    top: 0;
+    left: -3px;
+    z-index: -1;
+}
+.top-head-nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    
+    
+    
+    
+    
+    
+
+}
 .top-header{
     width: 100%;
     box-shadow: -25px -2px 13px gray;
@@ -9,95 +56,54 @@
     justify-content: space-between;
     box-sizing: border-box;
 
-    .top-head-nav{
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        align-items: center;
-        .active{
-            color: #3376F7;
-
-        }
-        a {
-            text-decoration: none;
-            color: black;
-        }
-        
-        
-        p{
-            cursor: pointer;
-            font-weight: 500;
-            font-size: 14px;
-        }
-        p:hover{
-            color: #3376F7;
-
-        }
-        .logo{
-            position: relative;
-            font-weight: bold;
-            font-size: 15px;
-            .logo-round{
-                position: absolute;
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                background-color: #01f2f2;
-                top: 0;
-                left: -3px;
-                z-index: -1;
-            }
-        }
-
-    }
+    
 }
+#book-mark{
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+}
+.profile{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #01f2f2;
+    border: 2px solid gray;
 
+}
+.top-head-auth  p{
+    color: #0da7e6;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+}
 .top-head-auth{
     display: flex;
     gap: 10px;
     justify-content: flex-end;
     align-items: center;
-    #book-mark{
-        color: black;
-        font-weight: 500;
-        font-size: 14px;
-    }
-    .profile{
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background-color: #01f2f2;
-        border: 2px solid gray;
-
-    }
-    p{
-        color: #0da7e6;
-        font-weight: 500;
-        font-size: 14px;
-        cursor: pointer;
-    }
-}
-.top-head-auth{
-    .active{
-        color: #3376F7;
-
-    }
-    a {
-        text-decoration: none;
-        color: black;
-    }
     
     
-    p{
-        cursor: pointer;
-        font-weight: 500;
-        font-size: 14px;
-    }
-    p:hover{
-        color: #3376F7;
-
-    }
+   
 }
+.top-head-auth .active{
+    color: #3376F7;
+
+}
+.top-head-auth a {
+    text-decoration: none;
+    color: black;
+}
+.top-head-auth p{
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+}
+.top-head-auth p:hover{
+    color: #3376F7;
+
+}
+
 #book-mark .active{
         color: #3376F7;
 

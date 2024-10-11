@@ -83,13 +83,9 @@ const JobCard = ({job, bookmark}) => {
                 <WorkHistoryIcon />
                 {
                     typesOfWork.map((type, index) => (
-                        index === workTypes.length - 1 ?
+                        index <= 1 ? 
                 <p key = {index}>{type[0].toUpperCase() + type.substring(1) }</p>
-                        :
-                        job.workTypes[type] ?
-                <p key = {index}>{type[0].toUpperCase() + type.substring(1) + "/"}</p>
-                        :
-                        ""
+                        : ""
                     ))
                 }
             </div>
