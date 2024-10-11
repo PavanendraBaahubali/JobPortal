@@ -19,6 +19,21 @@
     height: 35%;
     border-radius: 20px;
 }
+.JobDetailsSkelton-job-details-bottom  .JobDetailsSkelton-job-description{
+    width: 100%;
+    background-color: #e6eefe;
+    border-radius: 20px;
+    height: 41%;
+
+
+}
+.JobDetailsSkelton-job-details-bottom  .JobDetailsSkelton-job-requirements{
+    width: 100%;
+    background-color: #e6eefe;
+    border-radius: 20px;
+    height: 38%;
+
+}
 .JobDetailsSkelton-job-details-bottom{
     width: 100%;
     /* background-color: red; */
@@ -28,19 +43,6 @@
     flex-direction: column;
     gap: 30px;
 
-    .JobDetailsSkelton-job-description{
-        width: 100%;
-        background-color: #e6eefe;
-        border-radius: 20px;
-        height: 41%;
-
-
-    }
-    .JobDetailsSkelton-job-requirements{
-        width: 100%;
-        background-color: #e6eefe;
-        border-radius: 20px;
-        height: 38%;
-
-    }
+    
+   
 }

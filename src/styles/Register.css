@@ -1,3 +1,41 @@
+.register  form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.register  form h2{
+    text-align: center;
+    letter-spacing: 1px;
+}
+.register svg{
+    position: absolute;
+    font-size: 22px;
+    color: gray;
+    top: 10px;
+    right: 0;
+}
+.register input{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 2px solid gray;
+    letter-spacing: 0.7px;
+}
+.register input:focus{
+    /* border: none; */
+    outline: none;
+}
+.confim-password,.register-password,.register-email,.first-name{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    
+    
+    
+}
 .register{
     border: 2px solid #ABB0BD;
     border-radius: 20px;
@@ -6,40 +44,8 @@
     width: 40%;
     margin: 0 auto;
     margin-top: 6%;
-    form{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        h2{
-            text-align: center;
-            letter-spacing: 1px;
-        }
-    }
-    .confim-password,.register-password,.register-email,.first-name{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        svg{
-            position: absolute;
-            font-size: 22px;
-            color: gray;
-            top: 10px;
-            right: 0;
-        }
-        input{
-            width: 100%;
-            border: none;
-            padding: 10px;
-            box-sizing: border-box;
-            border-bottom: 2px solid gray;
-            letter-spacing: 0.7px;
-        }
-        input:focus{
-            /* border: none; */
-            outline: none;
-        }
-    }
+   
+    
 }
 .register-btn{
     padding: 10px;

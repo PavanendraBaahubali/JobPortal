@@ -98,24 +98,19 @@
 
     }
 }
-#book-mark{
-    .active{
+#book-mark .active{
         color: #3376F7;
 
-    }
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    
-    
-    p{
-        cursor: pointer;
-        font-weight: 500;
-        font-size: 14px;
-    }
-    p:hover{
+}
+#book-mark a {
+    text-decoration: none;
+    color: black;
+}
+#book-mark  p{
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+}
+#book-mark p:hover{
         color: #3376F7;
-
-    }
 }

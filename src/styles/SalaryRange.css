@@ -1,40 +1,43 @@
+.salary-range .range-head
+    h4{
+        color: black;
+        margin: 0;
+    }
+
+    .range-start, .range-end{
+        background-color: white;
+        border-radius: 5px;
+        width: 30%;
+        padding: 5px;
+        font-size: 11px;
+        color: #8D8D8D;
+        letter-spacing: 1px;
+        border: none;
+    }
+.salary-range .range-bounds{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.range-start, .range-end:focus{
+    border: none;
+    outline: none;
+}
 .salary-range{
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    .range-head{
-        h4{
-            color: black;
-            margin: 0;
-        }
-    }
-    .range-bounds{
-        display: flex;
-        justify-content: space-between;
-        .range-start, .range-end{
-            background-color: white;
-            border-radius: 5px;
-            width: 30%;
-            padding: 5px;
-            font-size: 11px;
-            color: #8D8D8D;
-            letter-spacing: 1px;
-            border: none;
-        }
-        .range-start, .range-end:focus{
-            border: none;
-            outline: none;
-        }
-    }
+    
+
 }
-.range-bar{
-    .range{
-        width: 100%;
-        height: 4px;
-        outline: none;
-    }
+.range-bar .range{
+    width: 100%;
+    height: 4px;
+    outline: none;
 }
+
 .range {
     -webkit-appearance: none; /* Override default CSS styles */
     appearance: none; /* Override default CSS styles */
