@@ -5,6 +5,7 @@ import JobDetailsLayout from './components/JobDetailsLayout';
 import AuthLayout from './components/AuthLayout';
 import Register from './components/Register';
 import PrivateRoute from './components/PrivateRoute';
+import UserProfileLayout from './components/UserProfileLayout';
 
 function App() {
   const token = localStorage.getItem('token');
@@ -29,6 +30,7 @@ function App() {
               </PrivateRoute>
             } />
 
+            <Route path = '/profile' element = {<UserProfileLayout />} />
 
           {/* Auth Routes */}
           {!token ? (

@@ -5,7 +5,9 @@ const UserSlice = createSlice({
     initialState: {},
     reducers: {
         addUser : (state, action) => {
-            state['user'] = action.payload;
+            state['user'] = action.payload.userId;
+            state['user'] = action.payload.emailId;
+            state['user'] = action.payload.userName;
         }
     }
 

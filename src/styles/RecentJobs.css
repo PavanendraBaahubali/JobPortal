@@ -1,0 +1,34 @@
+.RecentJobs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 450px;
+    overflow-y: scroll;
+
+
+}
+.RecentJobs ::-webkit-scrollbar{
+    display: block;
+}
+.recent-jobcards-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-sizing: border-box;
+}
+.recent-jobs-head{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.recent-jobs-head h2{
+    margin: 0;
+}
+.recent-jobs-head {
+    font-weight: 500;
+    font-size: 13px;
+}

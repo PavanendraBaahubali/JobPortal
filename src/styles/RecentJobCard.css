@@ -1,0 +1,38 @@
+.RecentJobCard{
+    width: 100%;
+    display: flex;
+    padding: 10px 30px 10px 30px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #ebd7d7;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.RecentJobCard, h3{
+    font-size: 15px;
+    font-weight: 500;
+}
+.RecentJobCard h3 p{
+    margin: 0;
+
+}
+.RecentJobCard p{
+    color: gray;
+    font-size: 12px;
+    font-weight: 600;
+}
+.recent-job-poster{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: aqua;
+}
+.recent-job-main{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    width: 28%;
+}

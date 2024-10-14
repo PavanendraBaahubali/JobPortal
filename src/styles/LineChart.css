@@ -1,0 +1,16 @@
+/* Chart container styling */
+.chart-container {
+    position: relative;
+    width: 100%;   /* Full width */
+    height: 300px; /* Adjust height here */
+    margin: 20px auto; /* Center the chart */
+    background-color: #ffffff; /* Optional: Light background */
+  }
+  
+  /* Optional canvas styles */
+  canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  

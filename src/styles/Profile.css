@@ -1,0 +1,7 @@
+.user-profile{
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    gap: 5%;
+    padding: 20px;
+}

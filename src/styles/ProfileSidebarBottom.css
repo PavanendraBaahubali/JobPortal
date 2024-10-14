@@ -1,0 +1,65 @@
+.ProfileSidebarBottom{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.profile-edit {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    box-sizing: border-box;
+    align-items: center;
+}
+.profile-edit svg {
+    font-size: 16px;
+}
+.profile-edit h5{
+    margin: 0;
+}
+.profile-edit-data{
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 10px;
+}
+.profile-edit-data svg{
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+.profile-edit-data h5{
+    margin: 0;
+}
+.profile-edit h5{
+    font-size: 15px;
+}
+.profile-edit-data input{
+    width: 100%;
+    padding-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    color: gray;
+}
+.profile-edit-data input:focus {
+    outline: none;
+}
+.profile-edit-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.profile-edit-wrapper button{
+    width: 40%;
+    border-radius: 15px;
+    border: noe;
+    border: none;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
