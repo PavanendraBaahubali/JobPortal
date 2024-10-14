@@ -30,7 +30,9 @@ function App() {
               </PrivateRoute>
             } />
 
-            <Route path = '/profile' element = {<UserProfileLayout />} />
+            <Route path = '/profile' element = {<PrivateRoute >
+              <UserProfileLayout />
+            </PrivateRoute>} />
 
           {/* Auth Routes */}
           {!token ? (
