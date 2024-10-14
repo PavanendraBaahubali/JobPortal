@@ -50,13 +50,9 @@ const Register = () => {
        
         const response = await axios.post("https://jobportal-backend-0mls.onrender.com/auth/register", formData);
         localStorage.setItem('token', response.data.token);
-
-        dispatch(addUser(response.data));
+        dispatch(addUser(response.data))
         navigate('/');
 
-        dispatch(addUser(formData.emailId))
-
-        console.log(formData);
         setFormData({
             userName: '',
             password: '',
