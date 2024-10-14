@@ -8,8 +8,7 @@ const ProfileSidebarBottom = () => {
     const userId = localStorage.getItem('userId');
     const [isOnClick, setOnClick] = useState(false);
     
-    console.log(userId);
-
+    
     const [inputField, setInputField] = useState({
         name: '',
         emailId: '',

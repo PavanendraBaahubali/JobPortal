@@ -12,8 +12,8 @@ const RecentJobs = () => {
 
 
   useEffect(() => {
-    axios.get(`https://jobportal-backend-0mls.onrender.com/profile/appliedJobs/${userId}`)
-    .then((res) => setJobData(res))
+    axios.get(`http://localhost:3030/profile/appliedJobs/${userId}`)
+    .then((res) => setJobData(res.data))
     .catch((err) => console.log(err.message));
   }, [userId]);
 

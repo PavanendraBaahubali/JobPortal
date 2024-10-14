@@ -8,7 +8,7 @@ const RecentJobCard = ({data}) => {
         <div className='recent-job-poster'></div>
         <h3>{data.appliedJobs.jobRole}</h3>
         </div>
-        <p>15-Aug-2001</p>
+        <p>{data.appliedJobs.appliedDate}</p>
     </div>
   )
 }
