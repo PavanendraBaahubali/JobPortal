@@ -30,7 +30,7 @@ function App() {
               </PrivateRoute>
             } />
 
-            <Route path = '/profile' element = {<PrivateRoute >
+            <Route path = '/profile/:userId' element = {<PrivateRoute >
               <UserProfileLayout />
             </PrivateRoute>} />
 

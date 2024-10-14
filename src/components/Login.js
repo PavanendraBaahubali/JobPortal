@@ -45,6 +45,9 @@ const Login = () => {
             if (response.data.token) {
                 // Store token in localStorage
                 localStorage.setItem('token', response.data.token);
+                localStorage.setItem('userId', response.data.userId);
+                console.log(response.data)
+                console.log(localStorage.getItem('userId'));
             }
 
             setError(false);

@@ -55,11 +55,12 @@
     gap: 25px;
 }
 .profile-edit-wrapper button{
-    width: 40%;
-    border-radius: 15px;
+    width: 45%;
+    border-radius: 8px;
     border: noe;
     border: none;
-    background-color: blue;
+    background-color: #01b0f5;
     color: white;
-    padding: 10px;
+    padding: 12px;
+
 }

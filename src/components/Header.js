@@ -3,6 +3,9 @@ import "../styles/Header.css"
 import { NavLink, useNavigate } from 'react-router-dom'
 
 const Header = () => {
+    const userId = localStorage.getItem('userId');
+
+
     const token = localStorage.getItem('token');
     const navigate = useNavigate();
     const handleSignOut = () => {
@@ -32,7 +35,9 @@ const Header = () => {
             Bookmarks
                 </ NavLink></p>
             <p onClick={() => handleSignOut()}>Sign Out</p>
+            <NavLink to = {`/profile/${userId}`} >
             <div className='profile'></div>
+            </NavLink>
                 </>
 
                 :
