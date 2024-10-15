@@ -19,6 +19,23 @@
     gap: 5px;
     box-sizing: border-box;
 }
+.recent-jobcards-wrapper a{
+    text-decoration: none;
+    color: black;
+}
+
+.least-jobcards-wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 5px;
+    box-sizing: border-box;
+}
+.least-jobcards-wrapper a{
+    text-decoration: none;
+    color: black;
+}
+
+
 .recent-jobs-head{
     display: flex;
     justify-content: space-between;
@@ -31,4 +48,42 @@
 .recent-jobs-head {
     font-weight: 500;
     font-size: 13px;
+}
+.sortby{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    position: relative;
+    width: 20%;
+    cursor: pointer;
+}
+.sortby p{
+    margin: 0;
+}
+.sort-options{
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        position: absolute;
+        top: 25px;
+        right: 0;
+        background-color: white;
+        border: 1px solid;
+        border-radius: 5px;
+        width: 100%;
+}
+.sort-options li {
+    list-style: none;
+    padding: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.sort-options li:hover{
+    color: black;
+    background-color: #cfebf7;
+    border-radius: 5px;
+
 }

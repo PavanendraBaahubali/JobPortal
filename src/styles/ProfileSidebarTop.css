@@ -1,9 +1,16 @@
+
+
 .ProfileSidebarTop{
     display: flex;
     flex-direction: column;
     gap: 2%;
 }
-.profile-img{
+
+
+
+
+
+.ProfileSidebarTop .profile-img{
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -14,24 +21,78 @@
     justify-content: center;
     align-items: center;
 }
-.profile-img h4{
+.ProfileSidebarTop .profile-img h4{
     margin: 0;
     font-size: 40px;
     color: white;
 }
-.user-profile-details b{
+.ProfileSidebarTop .user-profile-details b{
     margin: 0;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.7px;
     color: gray;
 }
-.user-profile-details h1{
+.ProfileSidebarTop .user-profile-details h1{
     font-size: 20px;
     margin-bottom: 0;
 }
-.user-profile-details{
+.ProfileSidebarTop .user-profile-details{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+
+
+/* loading...  */
+
+
+
+
+.profileSidebarTopLoading{
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+.profileSidebarTopLoading .profile-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #cfebf7;
+    border: 2px solid white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .profileSidebarTopLoading .profile-img h4{
+    background-color: gray;
+    border-radius: 20px;
+    height: 5px;
+} */
+.profileSidebarTopLoading .user-profile-details b{
+    font-size: 20px;
+    margin-bottom: 0;
+    height: 16px;
+    width: 39%;
+    background-color: #cfebf7;
+    border-radius: 20px;
+
+}
+.profileSidebarTopLoading .user-profile-details h1{
+    font-size: 20px;
+    margin-bottom: 0;
+    height: 16px;
+    width: 50%;
+    background-color: #cfebf7;
+    border-radius: 20px;
+
+}
+.profileSidebarTopLoading .user-profile-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+

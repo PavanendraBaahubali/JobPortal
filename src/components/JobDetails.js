@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import "../styles/JobDetails.css"
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import QueryBuilderIcon from '@mui/icons-material/QueryBuilder';
@@ -8,15 +8,65 @@ import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { addToBookmark, removeBookmark } from '../reduxSlices/BookMarkSlice';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
-import { useNavigate } from 'react-router-dom';
+import {  useNavigate, useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import axios from 'axios';
 
 
 const JobDetails = ({info}) => {
    const [isToggle, setToggle] = useState(false);
+   const [isApplied, setApplied] = useState(false);
+
+    const [isApplyLoading, setApplyLoading] = useState(false);
+
+
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
+    const userId = localStorage.getItem('userId');
+    const {jobId} = useParams();
+
+    console.log('userId', userId);
+    console.log('jobId', jobId);
+
+
+ 
+
+    useEffect(() => {
+        axios.get(`https://jobportal-backend-0mls.onrender.com/profile/appliedJobs/${userId}`)
+            .then((res) => {
+                const match = res.data.some((job) => job.appliedJobs.jobId === jobId); // Check directly in the API response
+                setApplied(match); // Set the result of the match
+            })
+            .catch((err) => console.log(err.message));
+    }, [userId, jobId]);
     
+
+
+
+    const handleAppliedJob = async () => {
+        setApplyLoading(true)
+
+        const appliedJobData = {
+            userId,
+            jobId,
+            jobRole : info.job.title
+
+        }
+        try{
+            await axios.post(`http://localhost:3030/job/${jobId}`, appliedJobData)
+            setApplied(true);
+        }
+        catch(err) {
+            console.log(err.message);
+        }
+        finally{
+            setApplyLoading(false);
+        }
+        
+    }
+
+
    const toggleBookmark = () => {
     const token = localStorage.getItem('token');
     if (!token){
@@ -92,7 +142,8 @@ const JobDetails = ({info}) => {
             </div>
 
             <div className='job-apply'>
-                <button className='btn-apply'>Apply</button>
+             
+                <button onClick={() => !isApplied && handleAppliedJob()} className={!isApplied ? 'btn-apply' : 'btn-applied'}>{isApplyLoading ? 'Applying...' : isApplied ? 'Applied' : 'Apply'}</button>
             </div>
         </div>
         <div className='job-details-bottom'>
