@@ -54,7 +54,7 @@ const JobDetails = ({info}) => {
 
         }
         try{
-            await axios.post(`http://localhost:3030/job/${jobId}`, appliedJobData)
+            await axios.post(`https://jobportal-backend-0mls.onrender.com/job/${jobId}`, appliedJobData)
             setApplied(true);
         }
         catch(err) {
