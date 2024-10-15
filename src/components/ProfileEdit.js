@@ -5,9 +5,14 @@ const ProfileEdit = ({ name, inputField, setInputField, isOnClick, setOnClick })
     const [isEditing, setIsEditing] = useState(false);  // Tracks if the user is editing the field
 
     const handleInputChange = (e) => {
+        let id = ''
+        if (name === 'EmailId') id = 'emailId';
+        else{
+            id += (name.toLowerCase())
+        }
         setInputField({
             ...inputField, 
-            [name.toLowerCase()]: e.target.value  // Update inputField based on name (dynamic field update)
+            [id]: e.target.value  // Update inputField based on name (dynamic field update)
         });
     }
 

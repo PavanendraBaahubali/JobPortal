@@ -31,7 +31,7 @@ const RecentJobs = () => {
   return (
     <div className='RecentJobs'>
         <div className='recent-jobs-head'>
-            <h2>Recent Jobs</h2>
+            <h2>Recent Applied Jobs</h2>
             <div className='sortby'>
                 <p onClick={() => toggleSort()}>Sort By</p>
                 {
